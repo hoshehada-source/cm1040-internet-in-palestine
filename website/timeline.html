@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A timeline of the history of the internet in Palestine, 2006–2026.">
+  <title>Timeline — The Internet in Palestine</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/theme.js" defer></script>
+  <script src="js/text-size.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header" style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url('img/jerusalem.webp'); background-size: cover; background-position: center; padding: 4rem 1rem 3.5rem; text-shadow: 0 2px 6px rgba(0,0,0,0.8);">
+  <p class="eyebrow" style="color: #6ee7b7; font-weight: 700;">A Digital History</p>
+  <h1>The Internet in <span class="flag">Palestine</span></h1>
+  <p class="tagline">Internet and mobile access in Palestine, 2006&ndash;2026</p>
+  <span class="header-rule" aria-hidden="true"></span>
+</header>
+
+  <nav class="site-nav" aria-label="Main navigation">
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">Menu</button>
+    <ul id="nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="timeline.html" aria-current="page">Timeline</a></li>
+      <li><a href="operators.html">Operators</a></li>
+      <li><a href="test-connection.html">Speed</a></li>
+      <li><a href="sources.html">Sources</a></li>
+    </ul>
+    <button id="text-size-toggle" class="text-size-toggle" aria-label="Use larger text size">A+</button>
+    <button id="theme-toggle" class="theme-toggle" aria-label="Switch to dark mode">&#127769;</button>
+  </nav>
+
+  <main id="main">
+    <section aria-labelledby="tl-heading">
+      <h2 id="tl-heading">Timeline of the internet in Palestine</h2>
+      <p>
+        This timeline covers the main developments in internet and mobile access in Palestine from
+        2009 to 2026. Earlier milestones &mdash; the first ISP (PALNET, 1994), the founding of Paltel
+        (1995) and the .ps domain (2000) &mdash; are included only as background.
+      </p>
+      <div class="search-bar">
+        <label for="timeline-search">Search the timeline:</label>
+        <input type="search" id="timeline-search" placeholder="Type a year or a word, e.g. 3G">
+      </div>
+      <!-- This content is rendered from data/timeline.json by the template engine. -->
+      <div id="timeline">
+        <p class="message">Loading timeline&hellip;</p>
+      </div>
+      <p id="no-result" class="message" style="display:none;">No events match your search.</p>
+    </section>
+
+    <section aria-labelledby="note-heading">
+      <h2 id="note-heading">Side note: why the delays?</h2>
+      <div class="side-note">
+        <figure class="note-fig">
+          <img class="note-img" src="img/tower.jpg" alt="A telecommunications tower with antennas against a cloudy sky" width="400" height="296" loading="lazy">
+          <figcaption>Photo: Kabiur Rahman Riyad / Unsplash</figcaption>
+        </figure>
+        <p>
+          Palestinian mobile operators license their radio frequencies (spectrum) through
+          arrangements with Israel, and route some traffic through Israeli networks
+          (<a class="cite" href="sources.html#src-reuters2026">Reuters, 2026</a>).
+          This is often given as one reason 3G reached the West Bank only in 2018, later than in
+          many other countries.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <button id="to-top" aria-label="Back to top">&uarr; Top</button>
+
+  <footer class="site-footer">
+    <p class="footer-label">Site map</p>
+    <nav class="footer-sitemap" aria-label="Site map">
+      <a href="index.html">Home</a>
+      <a href="timeline.html">Timeline</a>
+      <a href="operators.html">Operators</a>
+      <a href="test-connection.html">Speed</a>
+      <a href="sources.html">Sources</a>
+    </nav>
+    <p class="footer-note">This site tells the story of how the internet grew in Palestine, using real data.</p>
+    <p>&copy; 2026 Huda Shehada &middot; v1.7</p>
+  </footer>
+
+  <script src="js/template-engine.js" defer></script>
+  <script src="js/validate.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>

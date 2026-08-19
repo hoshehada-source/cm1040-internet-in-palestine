@@ -1,0 +1,121 @@
+{
+  "sources": [
+    {
+      "id": "acm2000",
+      "cite": "ACM, 2000",
+      "title": "From Via Maris to Electronic Highway: The Internet in Canaan",
+      "author": "Communications of the ACM",
+      "year": "2000",
+      "type": "Academic journal",
+      "url": "https://cacm.acm.org/opinion/international-perspectives-from-via-maris-to-electronic-highway/"
+    },
+    {
+      "id": "iana2000",
+      "cite": "IANA, 2000",
+      "title": "Report on the Delegation of the .ps Top-Level Domain",
+      "author": "Internet Assigned Numbers Authority (IANA)",
+      "year": "2000",
+      "type": "Official report",
+      "url": "https://www.iana.org/reports/2000/ps-report-22mar00.html"
+    },
+    {
+      "id": "afp2018",
+      "cite": "AFP, 2018",
+      "title": "Palestinians get 3G internet after decade-long row",
+      "author": "Agence France-Presse (via Phys.org)",
+      "year": "2018",
+      "type": "News agency",
+      "url": "https://phys.org/news/2018-01-palestinians-3g-internet-decade-long-row.html"
+    },
+    {
+      "id": "unesco2020",
+      "cite": "UNESCO, 2020",
+      "title": "COVID-19 in Palestine: how distance learning will help students continue education",
+      "author": "UNESCO",
+      "year": "2020",
+      "type": "International organisation",
+      "url": "https://www.unesco.org/en/articles/covid-19-palestine-how-distance-learning-will-help-student-continue-education"
+    },
+    {
+      "id": "worldbank2021",
+      "cite": "World Bank, 2021",
+      "title": "Unlocking the potential of the digital economy in the Palestinian territories",
+      "author": "World Bank",
+      "year": "2021",
+      "type": "Development report",
+      "url": "https://blogs.worldbank.org/en/digital-development/unlocking-potential-digital-economy-palestinian-territories"
+    },
+    {
+      "id": "datareportal2024",
+      "cite": "DataReportal, 2024",
+      "title": "Digital 2024: Palestine",
+      "author": "DataReportal (Kepios)",
+      "year": "2024",
+      "type": "Data report",
+      "url": "https://datareportal.com/reports/digital-2024-palestine"
+    },
+    {
+      "id": "reuters2026",
+      "cite": "Reuters, 2026",
+      "title": "Israel approves 4G mobile upgrade for West Bank Palestinians",
+      "author": "Reuters (via The Jerusalem Post)",
+      "year": "2026",
+      "type": "News agency",
+      "url": "https://www.jpost.com/middle-east/article-882496"
+    },
+    {
+      "id": "worldbankdata",
+      "cite": "World Bank data",
+      "title": "Individuals using the Internet (% of population) — Palestine",
+      "author": "World Bank Open Data (indicator IT.NET.USER.ZS)",
+      "year": "2024",
+      "type": "Open dataset",
+      "url": "https://data.worldbank.org/indicator/IT.NET.USER.ZS?locations=PS"
+    },
+    {
+      "id": "pcbs2018",
+      "cite": "PCBS, 2018",
+      "title": "Press release on the eve of the International Day for Telecommunication and Information Society",
+      "author": "Palestinian Central Bureau of Statistics (PCBS) and Ministry of Telecom and IT",
+      "year": "2018",
+      "type": "Official statistics",
+      "url": "https://www.pcbs.gov.ps/en/post-details/?postId=19810"
+    },
+    {
+      "id": "tradingeconomics",
+      "cite": "Trading Economics, 2026",
+      "title": "Palestine Internet Speed (data from Akamai)",
+      "author": "Trading Economics, citing Akamai State of the Internet reports",
+      "year": "2026",
+      "type": "Data aggregator",
+      "url": "https://tradingeconomics.com/palestine/internet-speed"
+    },
+    {
+      "id": "pcbs2023",
+      "cite": "PCBS, 2023",
+      "title": "PCBS & the Ministry of Communications and Information Technology: The World Telecommunication and Information Society Day, 17/05/2023",
+      "author": "Palestinian Central Bureau of Statistics (PCBS) and Ministry of Communications and IT",
+      "year": "2023",
+      "type": "Official statistics",
+      "url": "https://www.pcbs.gov.ps/en/post-details/?postId=20429"
+    },
+    {
+      "id": "datareportal2026",
+      "cite": "DataReportal, 2026",
+      "title": "Digital 2026: Palestine",
+      "author": "DataReportal (Kepios)",
+      "year": "2026",
+      "type": "Data report",
+      "url": "https://datareportal.com/reports/digital-2026-palestine"
+    },
+    {
+      "id": "datareportal2026uae",
+      "cite": "DataReportal, 2026 (UAE)",
+      "title": "Digital 2026: United Arab Emirates",
+      "author": "DataReportal (Kepios)",
+      "year": "2026",
+      "type": "Data report",
+      "url": "https://datareportal.com/reports/digital-2026-united-arab-emirates"
+    }
+  ]
+}

@@ -1,0 +1,163 @@
+/* ==========================================================================
+   Wireframe stylesheet — CM1040 Stage 2
+   Based on the black-and-white wireframe template from the module activity,
+   extended with a responsive grid + wireframe placeholder boxes.
+   ========================================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: #fff;
+    color: #000;
+}
+
+/* ---- template base (from the activity) ---- */
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav {
+    background: #f4f4f4;
+    padding: 1rem;
+    border-bottom: 1px solid #999;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* hamburger button — hidden on desktop, shown on mobile (matches the site) */
+.nav-toggle {
+    display: none;
+    width: 100%;
+    text-align: left;
+    background: #f4f4f4;
+    border: none;
+    padding: .2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    color: #333;
+}
+
+main {
+    flex: 1;
+    padding: 1rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* ---- section headings ---- */
+main section {
+    margin-bottom: 1.5rem;
+}
+
+main h2 {
+    font-size: 1.1rem;
+    border-bottom: 2px solid #000;
+    padding-bottom: .3rem;
+    margin-bottom: .8rem;
+}
+
+/* ---- responsive grid ---- */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.grid.two {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* ---- wireframe placeholder boxes (low fidelity, black & white) ---- */
+.box {
+    border: 1px solid #000;
+    background: #eee;
+    padding: 1rem;
+    min-height: 90px;
+}
+
+.img-box {
+    border: 1px solid #000;
+    background:
+        linear-gradient(45deg, transparent 49%, #999 49%, #999 51%, transparent 51%),
+        linear-gradient(-45deg, transparent 49%, #999 49%, #999 51%, transparent 51%),
+        #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 120px;
+    color: #555;
+    font-size: .8rem;
+}
+
+.line {
+    height: 10px;
+    background: #ccc;
+    border: 1px solid #aaa;
+    margin: .4rem 0;
+}
+.line.short { width: 50%; }
+.line.med   { width: 75%; }
+
+/* a small label that marks content coming from JSON via the template engine */
+.json-tag {
+    display: inline-block;
+    font-size: .7rem;
+    border: 1px solid #000;
+    padding: 1px 6px;
+    margin-left: .4rem;
+    vertical-align: middle;
+}
+
+.timeline .box { display: flex; gap: 1rem; align-items: flex-start; }
+.timeline .year { font-weight: bold; min-width: 60px; }
+
+/* ==========================================================================
+   MOBILE LAYOUT  (screenshot the page below this width for the mobile version)
+   ========================================================================== */
+@media (max-width: 768px) {
+    /* on mobile the links collapse behind a hamburger button (like the site) */
+    .nav-toggle {
+        display: block;
+    }
+    nav ul {
+        display: none;
+    }
+    nav ul.open {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+        text-align: center;
+    }
+    .grid,
+    .grid.two {
+        grid-template-columns: 1fr;   /* everything stacks into one column */
+    }
+}

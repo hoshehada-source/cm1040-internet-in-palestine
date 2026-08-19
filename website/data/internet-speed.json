@@ -1,0 +1,12 @@
+{
+  "note": "Only years where I found a real published speed number are shown here. I did not add a guess for the other years.",
+  "data": [
+    { "year": "2009", "mbps": 0.32, "sourceCite": "Trading Economics, 2026", "sourceId": "tradingeconomics" },
+    { "year": "2010", "mbps": 0.5, "sourceCite": "PCBS, 2018", "sourceId": "pcbs2018" },
+    { "year": "2017", "mbps": 8.58, "sourceCite": "PCBS, 2018", "sourceId": "pcbs2018" },
+    { "year": "2021", "mbps": 13, "sourceCite": "PCBS, 2023", "sourceId": "pcbs2023" },
+    { "year": "2022", "mbps": 26, "sourceCite": "PCBS, 2023", "sourceId": "pcbs2023" },
+    { "year": "2024", "mbps": 63.48, "sourceCite": "DataReportal, 2024", "sourceId": "datareportal2024" },
+    { "year": "2025", "mbps": 74.84, "sourceCite": "DataReportal, 2026", "sourceId": "datareportal2026" }
+  ]
+}

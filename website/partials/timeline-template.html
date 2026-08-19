@@ -1,0 +1,9 @@
+{{#each events}}
+<article class="event">
+  <span class="event-year">{{year}}</span>
+  <div class="event-body">
+    <h3>{{title}}</h3>
+    <p>{{description}}{{#if sourceId}} <a class="cite" href="sources.html#src-{{sourceId}}">({{source}})</a>{{/if}}</p>
+  </div>
+</article>
+{{/each}}

@@ -1,0 +1,23 @@
+{
+  "source": "World Bank — Individuals using the Internet (% of population), Palestine",
+  "sourceUrl": "https://data.worldbank.org/indicator/IT.NET.USER.ZS?locations=PS",
+  "data": [
+    { "year": "2006", "value": 18.4 },
+    { "year": "2007", "value": 21.2 },
+    { "year": "2008", "value": 24.4 },
+    { "year": "2009", "value": 32.2 },
+    { "year": "2010", "value": 37.4 },
+    { "year": "2011", "value": 41.1 },
+    { "year": "2012", "value": 43.4 },
+    { "year": "2013", "value": 46.6 },
+    { "year": "2014", "value": 53.7 },
+    { "year": "2015", "value": 56.7 },
+    { "year": "2016", "value": 59.9 },
+    { "year": "2017", "value": 63.3 },
+    { "year": "2018", "value": 64.4 },
+    { "year": "2019", "value": 70.6 },
+    { "year": "2020", "value": 76.2 },
+    { "year": "2022", "value": 88.6 },
+    { "year": "2023", "value": 86.6 }
+  ]
+}

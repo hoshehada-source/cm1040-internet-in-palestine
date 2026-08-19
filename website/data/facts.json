@@ -1,0 +1,28 @@
+{
+  "facts": [
+    {
+      "stat": "2018",
+      "label": "3G mobile service reached the West Bank"
+    },
+    {
+      "stat": "71.1%",
+      "label": "of people in Palestine were online in 2019"
+    },
+    {
+      "stat": "2020",
+      "label": "the internet became essential when schools closed during COVID-19"
+    },
+    {
+      "stat": "88.6%",
+      "label": "of people in Palestine were online by early 2024"
+    },
+    {
+      "stat": "4.46M",
+      "label": "active mobile connections in early 2024"
+    },
+    {
+      "stat": "2026",
+      "label": "a 4G upgrade for the West Bank was approved"
+    }
+  ]
+}

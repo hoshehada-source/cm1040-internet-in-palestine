@@ -1,0 +1,70 @@
+{
+  "events": [
+    {
+      "year": "2009",
+      "title": "A second mobile operator",
+      "description": "Wataniya Mobile (today Ooredoo Palestine) launches in the West Bank, adding competition to a market that Jawwal had led on its own."
+    },
+    {
+      "year": "2015",
+      "title": "Agreement on frequencies",
+      "description": "An agreement over the 2100 MHz frequency band is reached, which later makes it possible to switch on 3G.",
+      "source": "AFP, 2018",
+      "sourceId": "afp2018"
+    },
+    {
+      "year": "2017",
+      "title": "Ooredoo reaches Gaza",
+      "description": "The second operator begins offering services in the Gaza Strip, giving people there another mobile option."
+    },
+    {
+      "year": "2018",
+      "title": "3G reaches the West Bank",
+      "description": "On 23 January 2018, 3G launched in the West Bank following the agreement over radio frequencies. It was not available in Gaza at that time.",
+      "source": "AFP, 2018",
+      "sourceId": "afp2018"
+    },
+    {
+      "year": "2019",
+      "title": "Mostly mobile access",
+      "description": "Around 71% of people had internet access, but only about 7% had a fixed-broadband subscription, so most people relied on mobile networks to get online.",
+      "source": "World Bank, 2021",
+      "sourceId": "worldbank2021"
+    },
+    {
+      "year": "2020",
+      "title": "COVID-19 moves life online",
+      "description": "After schools and universities closed in March 2020, the Ministry of Education launched distance learning, and the internet became essential for study and work.",
+      "source": "UNESCO, 2020",
+      "sourceId": "unesco2020"
+    },
+    {
+      "year": "2021",
+      "title": "The Digital West Bank and Gaza project",
+      "description": "The World Bank approved a $20 million grant to expand fibre-optic networks and build e-government services, aiming to close infrastructure gaps.",
+      "source": "World Bank, 2021",
+      "sourceId": "worldbank2021"
+    },
+    {
+      "year": "2022",
+      "title": "A framework for 4G and 5G",
+      "description": "Israel and the Palestinian Authority agree a framework intended to allow 4G and 5G mobile technology in the future.",
+      "source": "Reuters, 2026",
+      "sourceId": "reuters2026"
+    },
+    {
+      "year": "2024",
+      "title": "Most people are online",
+      "description": "About 88.6% of people in Palestine are internet users (around 4.82 million), with roughly 4.46 million mobile connections.",
+      "source": "DataReportal, 2024",
+      "sourceId": "datareportal2024"
+    },
+    {
+      "year": "2026",
+      "title": "Approval for 4G",
+      "description": "A 4G upgrade for the West Bank is approved as part of the 2022 framework, with rollout expected within months.",
+      "source": "Reuters, 2026",
+      "sourceId": "reuters2026"
+    }
+  ]
+}

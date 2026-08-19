@@ -1,0 +1,7 @@
+{
+  "note": "Both numbers are median fixed download speed from Ookla, published by DataReportal for end of 2025 - same source, same type of measurement, so they can be compared fairly.",
+  "benchmarks": [
+    { "place": "Palestine", "mbps": 74.84, "period": "end of 2025", "sourceCite": "DataReportal, 2026 (Palestine)", "sourceId": "datareportal2026" },
+    { "place": "United Arab Emirates", "mbps": 327.56, "period": "end of 2025", "sourceCite": "DataReportal, 2026 (UAE)", "sourceId": "datareportal2026uae" }
+  ]
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Test your own download speed and see how it compares with real published figures for Palestine and the UAE.">
+  <title>Test Your Connection — The Internet in Palestine</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/theme.js" defer></script>
+  <script src="js/text-size.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header" style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url('img/jerusalem.webp'); background-size: cover; background-position: center; padding: 4rem 1rem 3.5rem; text-shadow: 0 2px 6px rgba(0,0,0,0.8);">
+  <p class="eyebrow" style="color: #6ee7b7; font-weight: 700;">A Digital History</p>
+  <h1>The Internet in <span class="flag">Palestine</span></h1>
+  <p class="tagline">Internet and mobile access in Palestine, 2006&ndash;2026</p>
+  <span class="header-rule" aria-hidden="true"></span>
+</header>
+
+  <nav class="site-nav" aria-label="Main navigation">
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">Menu</button>
+    <ul id="nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="timeline.html">Timeline</a></li>
+      <li><a href="operators.html">Operators</a></li>
+      <li><a href="test-connection.html" aria-current="page">Speed</a></li>
+      <li><a href="sources.html">Sources</a></li>
+    </ul>
+    <button id="text-size-toggle" class="text-size-toggle" aria-label="Use larger text size">A+</button>
+    <button id="theme-toggle" class="theme-toggle" aria-label="Switch to dark mode">&#127769;</button>
+  </nav>
+
+  <main id="main">
+    <section aria-labelledby="test-heading">
+      <h2 id="test-heading">Test your connection</h2>
+      <p>
+        This history has been about how internet access developed in Palestine over time.
+        This page brings it to the present: test your own download speed, then see it next to
+        real published figures for Palestine and for the UAE (where this project was made).
+      </p>
+
+      <div class="chart-wrap">
+        <p>
+          This is an estimate of your download speed <strong>to this website</strong>, not an
+          official, certified speed test &mdash; it does not send any data to an outside service.
+        </p>
+        <button type="button" id="measure-btn" class="sim-year-btn">Start speed test</button>
+        <p id="my-speed-result" class="message" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <section aria-labelledby="context-heading">
+      <h2 id="context-heading">Put your speed into context</h2>
+      <p>
+        These are national median figures, not a single person&rsquo;s measurement &mdash; so treat
+        them as benchmarks to compare against, not as an exact match to any one connection.
+      </p>
+      <div id="compare-box" class="chart-wrap">
+        <p class="message">Loading&hellip;</p>
+      </div>
+    </section>
+
+    <section aria-labelledby="calc-heading">
+      <h2 id="calc-heading">Download-time calculator</h2>
+      <p>
+        The test above uses a small 2&nbsp;MB file, just to measure speed quickly. This calculator
+        takes that same speed and works out how long a much bigger, 500&nbsp;MB file would actually
+        take &mdash; a more realistic size, like an app update or a short video.
+      </p>
+      <div id="calc-box" class="chart-wrap">
+        <p class="message">Run the speed test above to see this calculated for your connection.</p>
+      </div>
+    </section>
+
+    <section aria-labelledby="note-heading">
+      <h2 id="note-heading">About this measurement</h2>
+      <p>
+        This just estimates how fast this one file downloaded to your device &mdash; it is not an
+        official speed test. Things like your Wi-Fi, your device and general network conditions
+        can change the result. To get a steadier number, it downloads the same file three times
+        and uses the middle result, so one lucky or unlucky attempt does not decide everything.
+      </p>
+      <p>
+        The Palestine and UAE numbers come from the same report, measured the same way, at the end
+        of 2025, so they are fair to compare with each other. But they are national averages, not a
+        match for any one person's connection. Your result is just one test on your device &mdash;
+        not proof of what internet access is really like across Palestine or the UAE.
+      </p>
+    </section>
+  </main>
+
+  <button id="to-top" aria-label="Back to top">&uarr; Top</button>
+
+  <footer class="site-footer">
+    <p class="footer-label">Site map</p>
+    <nav class="footer-sitemap" aria-label="Site map">
+      <a href="index.html">Home</a>
+      <a href="timeline.html">Timeline</a>
+      <a href="operators.html">Operators</a>
+      <a href="test-connection.html">Speed</a>
+      <a href="sources.html">Sources</a>
+    </nav>
+    <p class="footer-note">This site tells the story of how the internet grew in Palestine, using real data.</p>
+    <p>&copy; 2026 Huda Shehada &middot; v1.7</p>
+  </footer>
+
+  <script src="js/template-engine.js" defer></script>
+  <script src="js/validate.js" defer></script>
+  <script src="js/test-connection.js" defer></script>
+</body>
+</html>

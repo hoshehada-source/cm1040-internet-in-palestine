@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" role="img" aria-label="Flag of Palestine">
+  <rect width="600" height="100" y="0" fill="#000000"/>
+  <rect width="600" height="100" y="100" fill="#ffffff"/>
+  <rect width="600" height="100" y="200" fill="#007a3d"/>
+  <path d="M0,0 L0,300 L260,150 Z" fill="#ce1126"/>
+</svg>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The history of the internet in Palestine: key facts, timeline and telecom operators.">
+  <title>Home — The Internet in Palestine</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/theme.js" defer></script>
+  <script src="js/text-size.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- Header with clear Jerusalem background image -->
+  <header class="site-header" style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url('img/jerusalem.webp'); background-size: cover; background-position: center; padding: 4rem 1rem 3.5rem; text-shadow: 0 2px 6px rgba(0,0,0,0.8);">
+    <p class="eyebrow" style="color: #6ee7b7; font-weight: 700;">A Digital History</p>
+    <h1>The Internet in <span class="flag">Palestine</span></h1>
+    <p class="tagline">Internet and mobile access in Palestine, 2006&ndash;2026</p>
+    <span class="header-rule" aria-hidden="true"></span>
+    <p class="photo-credit">Background: Jerusalem, photo by Bienchido, Wikimedia Commons (CC BY-SA 4.0)</p>
+  </header>
+
+  <nav class="site-nav" aria-label="Main navigation">
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">Menu</button>
+    <ul id="nav-menu">
+      <li><a href="index.html" aria-current="page">Home</a></li>
+      <li><a href="timeline.html">Timeline</a></li>
+      <li><a href="operators.html">Operators</a></li>
+      <li><a href="test-connection.html">Speed</a></li>
+      <li><a href="sources.html">Sources</a></li>
+    </ul>
+    <button id="text-size-toggle" class="text-size-toggle" aria-label="Use larger text size">A+</button>
+    <button id="theme-toggle" class="theme-toggle" aria-label="Switch to dark mode">&#127769;</button>
+  </nav>
+
+  <main id="main">
+    <section class="hero">
+      <img class="hero-flag" src="img/palestine-flag.svg" alt="The flag of Palestine" width="600" height="300">
+      <h2>The Internet in Palestine: A Short History</h2>
+      <p>
+      Welcome to a digital journey exploring how internet and mobile technology evolved across Palestine.
+     Discover the milestones, challenges, and growth behind our digital landscape.
+      </p>
+    </section>
+
+    <section aria-labelledby="facts-heading">
+      <h2 id="facts-heading">Key facts</h2>
+      <!-- This content is rendered from data/facts.json by the template engine. -->
+      <div id="facts" class="grid">
+        <p class="message">Loading key facts&hellip;</p>
+      </div>
+    </section>
+
+    <section aria-labelledby="chart-heading">
+      <h2 id="chart-heading">Internet use over time</h2>
+      <p>
+        Data from the World Bank shows how the share of people using the internet in Palestine
+        changed during my lifetime. Click or tab to a bar to see its exact value. 2023 is the
+        most recent year the World Bank has published for this figure.
+      </p>
+      <!-- This chart is drawn from data/internet-usage.json (World Bank data) by chart.js. -->
+      <div id="usage-chart" class="chart-wrap">
+        <p class="message">Loading chart&hellip;</p>
+      </div>
+      <p id="chart-caption" class="chart-caption">Tap or click a bar for its value.</p>
+      <p class="chart-source">Source: <a class="cite" href="sources.html#src-worldbankdata">World Bank, Individuals using the Internet (% of population)</a>.</p>
+    </section>
+
+    <section aria-labelledby="speed-heading">
+      <h2 id="speed-heading">How fast was the internet, really?</h2>
+      <p>
+        Click a year below to see the real, published internet speed in Palestine at that time.
+        Only years with reliable data are shown &mdash; speed was not measured everywhere every year.
+      </p>
+      <div id="speed-sim" class="chart-wrap">
+        <p class="message">Loading&hellip;</p>
+      </div>
+      <p class="chart-source">
+        Curious how your own connection compares? <a href="test-connection.html">Test your connection &rarr;</a>
+      </p>
+    </section>
+
+    <section aria-labelledby="why-heading">
+      <h2 id="why-heading">Background</h2>
+      <p>
+        Internet access in Palestine developed later in some areas than in many other countries.
+        For example, 3G mobile service reached the West Bank in 2018
+        (<a class="cite" href="sources.html#src-afp2018">AFP, 2018</a>), and a 4G upgrade was
+        approved in 2026 (<a class="cite" href="sources.html#src-reuters2026">Reuters, 2026</a>).
+        One reason often given is that mobile operators license their radio frequencies through
+        arrangements with Israel.
+      </p>
+      <p>
+        Despite this, internet use is high: about 88.6% of people were online by early 2024
+        (<a class="cite" href="sources.html#src-datareportal2024">DataReportal, 2024</a>). The difference in access between areas is an example of what is called
+        the &ldquo;digital divide&rdquo; &mdash; the gap between those with good access and those without.
+      </p>
+    </section>
+  </main>
+
+  <button id="to-top" aria-label="Back to top">&uarr; Top</button>
+
+  <footer class="site-footer">
+    <p class="footer-label">Site map</p>
+    <nav class="footer-sitemap" aria-label="Site map">
+      <a href="index.html">Home</a>
+      <a href="timeline.html">Timeline</a>
+      <a href="operators.html">Operators</a>
+      <a href="test-connection.html">Speed</a>
+      <a href="sources.html">Sources</a>
+    </nav>
+    <p class="footer-note">This site tells the story of how the internet grew in Palestine, using real data.</p>
+    <p>&copy; 2026 Huda Shehada &middot; v1.7</p>
+  </footer>
+
+  <script src="js/template-engine.js" defer></script>
+  <script src="js/validate.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/chart.js" defer></script>
+  <script src="js/speed.js" defer></script>
+</body>
+</html>

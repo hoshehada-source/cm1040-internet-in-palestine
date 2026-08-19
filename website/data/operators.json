@@ -1,0 +1,28 @@
+{
+  "operators": [
+    {
+      "name": "Paltel",
+      "founded": "1995",
+      "logo": "img/paltel.png",
+      "role": "The main telecommunications company in Palestine, providing fixed phone lines, internet and data services."
+    },
+    {
+      "name": "Jawwal",
+      "founded": "1999",
+      "logo": "img/jawwal.webp",
+      "role": "The first Palestinian mobile operator, created by Paltel, which started the mobile phone era in Palestine."
+    },
+    {
+      "name": "Ooredoo (Wataniya)",
+      "founded": "2009",
+      "logo": "img/ooredoo.svg",
+      "role": "The second mobile operator, which brought competition to the market and later reached Gaza in 2017."
+    },
+    {
+      "name": "Ministry of Telecommunications (MTIT)",
+      "founded": "1994",
+      "logo": "img/mtit.jpg",
+      "role": "The government body that regulates telecommunications and the internet in Palestine."
+    }
+  ]
+}

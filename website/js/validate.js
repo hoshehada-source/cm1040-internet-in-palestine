@@ -1,0 +1,33 @@
+/* ============================================================
+   validate.js
+   Checks a JSON list before it gets rendered: is it actually a
+   list, is it non-empty, does every item have the fields it
+   needs. Returns a message if not, so the page can bail out
+   instead of showing broken output.
+   ============================================================ */
+
+function validateItems(items, requiredFields) {
+  if (!Array.isArray(items)) {
+    return { valid: false, message: "the data is not a list." };
+  }
+
+  if (items.length == 0) {
+    return { valid: false, message: "the list is empty." };
+  }
+
+  for (let i = 0; i < items.length; i++) {
+    for (let j = 0; j < requiredFields.length; j++) {
+      const field = requiredFields[j];
+      const value = items[i][field];
+
+      if (value == undefined || value == null || value == "") {
+        return {
+          valid: false,
+          message: 'item ' + (i + 1) + ' is missing the "' + field + '" field.'
+        };
+      }
+    }
+  }
+
+  return { valid: true };
+}
