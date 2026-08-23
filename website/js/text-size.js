@@ -1,8 +1,8 @@
-/* ============================================================
+/* 
    text-size.js
    Lets the visitor make the text on this page bigger, for
    easier reading, by clicking the "A+" button.
-   ============================================================ */
+*/
 
 document.addEventListener("DOMContentLoaded", function () {
   const button = document.getElementById("text-size-toggle");

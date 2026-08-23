@@ -1,9 +1,7 @@
-/* ============================================================
+/* 
    speed.js
    Historical speed simulator. Loads internet-speed.json, click a
-   year to see a bar for the real speed that year. Only years with
-   an actual published number are here - no guessed values.
-   ============================================================ */
+   year to see a bar for the real speed that year.*/
 
 document.addEventListener("DOMContentLoaded", function () {
   const simBox = document.getElementById("speed-sim");

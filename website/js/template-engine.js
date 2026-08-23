@@ -25,8 +25,7 @@ class SimpleTemplateEngine {
             return listOfThings.map(item => this.replaceVariablesInFragment(templateFragment, item)).join('');
         });
 
-        // Anything outside an #each loop still needs its #if and
-        // variables filled in too, so run it through the same function.
+    
         output = this.replaceVariablesInFragment(output, data);
 
         tag.innerHTML = output;

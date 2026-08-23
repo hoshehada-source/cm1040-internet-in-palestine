@@ -1,12 +1,12 @@
 # Media credits
 
 ## Images I did NOT create (attributed here)
-- **Jerusalem panorama** (`img/jerusalem.webp`) — "Panorámica de Jerusalén desde el Monte de
-  los Olivos" by **Bienchido**, from Wikimedia Commons. Licensed under **CC BY-SA 4.0**.
+- Jerusalem panoram (`img/jerusalem.webp`) — "Panorámica de Jerusalén desde el Monte de
+  los Olivos" by Bienchido, from Wikimedia Commons. Licensed under CC BY-SA 4.0.
   https://commons.wikimedia.org/wiki/File:Panor%C3%A1mica_de_Jerusal%C3%A9n_desde_el_Monte_de_los_Olivos.jpg
-- **Telecommunications tower photo** (`img/tower.jpg`) — Photo by **Kabiur Rahman Riyad** on
-  **Unsplash** (Unsplash licence, free to use). https://unsplash.com/
-- **Operator logos** — used to identify the companies (editorial use):
+- Telecommunications tower photo (`img/tower.jpg`) — Photo by Kabiur Rahman Riyad on
+  Unsplash (Unsplash licence, free to use). https://unsplash.com/
+- Operator logos — used to identify the companies (editorial use):
   - `img/paltel.png` — Paltel logo, © Paltel Group (paltel.ps)
   - `img/jawwal.webp` — Jawwal logo, © Jawwal (jawwal.ps)
   - `img/ooredoo.svg` — Ooredoo logo, © Ooredoo (ooredoo.ps)

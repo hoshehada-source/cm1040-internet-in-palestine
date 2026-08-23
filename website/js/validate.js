@@ -1,10 +1,7 @@
-/* ============================================================
+/* 
    validate.js
-   Checks a JSON list before it gets rendered: is it actually a
-   list, is it non-empty, does every item have the fields it
-   needs. Returns a message if not, so the page can bail out
-   instead of showing broken output.
-   ============================================================ */
+   Checks a JSON list before it gets rendered
+    */
 
 function validateItems(items, requiredFields) {
   if (!Array.isArray(items)) {

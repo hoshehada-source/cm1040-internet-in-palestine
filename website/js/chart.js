@@ -1,9 +1,8 @@
-/* ============================================================
+/* 
    chart.js
    Bar chart for the home page. Loads internet-usage.json,
-   checks it, draws bars as buttons (height = % via CSS).
-   Click a bar to see the exact number.
-   ============================================================ */
+   checks it, draws bars as buttons
+   Click a bar to see the exact number. */
 
 document.addEventListener("DOMContentLoaded", function () {
   const chartBox = document.getElementById("usage-chart");
@@ -24,7 +23,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
       chartBox.innerHTML = buildSimpleChart(items);
 
-      // these are <button> elements so tab/enter already works, no extra code needed
       const bars = chartBox.querySelectorAll(".bar-btn");
       bars.forEach(function (bar) {
         bar.addEventListener("click", function () {
@@ -54,7 +52,6 @@ function buildSimpleChart(items) {
     html += '<button type="button" class="bar-btn" data-year="' + item.year + '" data-value="' + item.value +
       '" style="height:' + item.value + '%;" aria-label="' + item.year + ': ' + item.value + ' percent">';
 
-    // only label every other bar, otherwise it's too crowded with 17 of them
     if (i % 2 === 0) {
       html += '<span class="bar-year">' + item.year + '</span>';
     }
