@@ -1,5 +1,5 @@
-// Makes the wireframe hamburger button open/close the menu on mobile,
-// so you can navigate between the wireframe pages (same idea as the real site).
+// Makes the wireframe menu button open/close the menu on mobile,
+// so you can navigate between the wireframe pages.
 document.addEventListener('DOMContentLoaded', function () {
   var button = document.querySelector('.nav-toggle');
   var menu = document.querySelector('nav ul');

@@ -1,8 +1,4 @@
-/* ==========================================================================
-   Wireframe stylesheet — CM1040 Stage 2
-   Based on the black-and-white wireframe template from the module activity,
-   extended with a responsive grid + wireframe placeholder boxes.
-   ========================================================================== */
+/* Wireframe stylesheet —*/
 
 * {
     margin: 0;
@@ -19,7 +15,7 @@ body {
     color: #000;
 }
 
-/* ---- template base (from the activity) ---- */
+/*template base  */
 header {
     background: #333;
     color: #fff;
@@ -44,7 +40,7 @@ nav a {
     color: #333;
 }
 
-/* hamburger button — hidden on desktop, shown on mobile (matches the site) */
+/* menu button  hidden on desktop, shown on mobile */
 .nav-toggle {
     display: none;
     width: 100%;
@@ -72,7 +68,7 @@ footer {
     padding: 1rem;
 }
 
-/* ---- section headings ---- */
+/* section headings */
 main section {
     margin-bottom: 1.5rem;
 }
@@ -84,7 +80,7 @@ main h2 {
     margin-bottom: .8rem;
 }
 
-/* ---- responsive grid ---- */
+/*  responsive grid  */
 .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -95,7 +91,7 @@ main h2 {
     grid-template-columns: repeat(2, 1fr);
 }
 
-/* ---- wireframe placeholder boxes (low fidelity, black & white) ---- */
+/* wireframe placeholder boxes ( black & white) */
 .box {
     border: 1px solid #000;
     background: #eee;
@@ -126,7 +122,6 @@ main h2 {
 .line.short { width: 50%; }
 .line.med   { width: 75%; }
 
-/* a small label that marks content coming from JSON via the template engine */
 .json-tag {
     display: inline-block;
     font-size: .7rem;
@@ -139,11 +134,11 @@ main h2 {
 .timeline .box { display: flex; gap: 1rem; align-items: flex-start; }
 .timeline .year { font-weight: bold; min-width: 60px; }
 
-/* ==========================================================================
-   MOBILE LAYOUT  (screenshot the page below this width for the mobile version)
-   ========================================================================== */
+/* 
+   MOBILE LAYOUT  
+   */
 @media (max-width: 768px) {
-    /* on mobile the links collapse behind a hamburger button (like the site) */
+    /* on mobile the links collapse behind a menu button  */
     .nav-toggle {
         display: block;
     }
