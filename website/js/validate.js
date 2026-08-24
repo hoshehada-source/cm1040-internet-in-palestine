@@ -1,6 +1,6 @@
 /* validate.js
   Checks a JSON list before it gets rendered
-    */
+*/
 
 function validateItems(items, requiredFields) {
   if (!Array.isArray(items)) {
