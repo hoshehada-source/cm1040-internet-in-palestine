@@ -91,13 +91,16 @@ input:focus-visible {
 /* header  */
 header.site-header {
   position: relative;
+  /* dark layer over the photo so the white text stays readable,
+     with the old gradient underneath in case the image does not load */
   background:
-    radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.05) 1px, transparent 0) 0 0 / 22px 22px,
-    radial-gradient(900px 240px at 50% -30%, rgba(75, 191, 130, 0.16), transparent 65%),
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)),
+    url("../img/jerusalem.webp") center / cover no-repeat,
     linear-gradient(135deg, #23272c 0%, #0c0d10 100%);
   color: #fff;
-  padding: 2.4rem 1rem 2rem;
+  padding: 4rem 1rem 3.5rem;
   text-align: center;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
   border-bottom: 3px solid var(--gold);
 }
 .eyebrow {
@@ -105,7 +108,7 @@ header.site-header {
   letter-spacing: 3px;
   font-size: 0.68rem;
   font-weight: 700;
-  color: var(--gold);
+  color: #6ee7b7;
   margin-bottom: 0.6rem;
 }
 header.site-header h1 {
@@ -437,6 +440,10 @@ p {
 .message.error {
   border-color: var(--red);
   color: var(--red);
+}
+/* hidden until the timeline search finds nothing - main.js shows it */
+#no-result {
+  display: none;
 }
 
 /* data visualisation (chart)  */
@@ -773,9 +780,6 @@ footer.site-footer {
 
 /* DESKTOP LAYOUT (768px and up) */
 @media (min-width: 768px) {
-  header.site-header {
-    padding: 2.6rem 1rem 2rem;
-  }
   header.site-header h1 {
     font-size: 2.4rem;
   }

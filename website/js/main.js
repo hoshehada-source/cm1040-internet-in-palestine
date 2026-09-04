@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
           factsEngine.renderTemplate("facts", { facts: data.facts });
         })
-        .catch(function (error) {
+        .catch(function () {
           factsBox.innerHTML = "<p>Sorry, could not load the facts.</p>";
         });
     });
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
           timelineEngine.renderTemplate("timeline", { events: data.events });
         })
-        .catch(function (error) {
+        .catch(function () {
           timelineBox.innerHTML = "<p>Sorry, could not load the timeline.</p>";
         });
     });
@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
           operatorsEngine.renderTemplate("operators", { operators: data.operators });
         })
-        .catch(function (error) {
+        .catch(function () {
           operatorsBox.innerHTML = "<p>Sorry, could not load the operators.</p>";
         });
     });
@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
           sourcesEngine.renderTemplate("sources", { sources: data.sources });
         })
-        .catch(function (error) {
+        .catch(function () {
           sourcesBox.innerHTML = "<p>Sorry, could not load the sources.</p>";
         });
     });

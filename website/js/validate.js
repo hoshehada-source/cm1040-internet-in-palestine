@@ -16,7 +16,8 @@ function validateItems(items, requiredFields) {
       const field = requiredFields[j];
       const value = items[i][field];
 
-      if (value == undefined || value == null || value == "") {
+      // strict checks here - with == a 0 value would count as "empty" by mistake
+      if (value === undefined || value === null || value === "") {
         return {
           valid: false,
           message: 'item ' + (i + 1) + ' is missing the "' + field + '" field.'
