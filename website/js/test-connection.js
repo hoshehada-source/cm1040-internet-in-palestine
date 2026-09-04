@@ -23,15 +23,15 @@ document.addEventListener("DOMContentLoaded", function () {
 // downloads the test file once, times it, pushes the result to the list
 function downloadOnce(measurements) {
   const testFile = "speed-test-file.bin?cachebust=" + Date.now() + "-" + measurements.length;
-  const startTime = performance.now(); // record the time before the download starts
+  const startTime = performance.now();
 
   return fetch(testFile)
-    .then(function (response) { return response.blob(); }) // wait until the whole file has arrived
+    .then(function (response) { return response.blob(); })
     .then(function (blob) {
-      const endTime = performance.now(); // record the time once it's fully downloaded
-      const seconds = (endTime - startTime) / 1000; // how long the download actually took
-      const bits = blob.size * 8; // file size in bytes, converted to bits
-      const mbps = (bits / seconds) / 1000000; // bits per second, converted to Mbps
+      const endTime = performance.now();
+      const seconds = (endTime - startTime) / 1000;
+      const bits = blob.size * 8;
+      const mbps = (bits / seconds) / 1000000;
       measurements.push({ mbps: mbps, seconds: seconds });
     });
 }
@@ -72,7 +72,7 @@ function showResult(result, measurements) {
     return;
   }
 
-  mySpeedMbps = median.mbps; // save it so the calculator further down can use it too
+  mySpeedMbps = median.mbps;
   result.textContent = "Your estimated download speed: about " + median.mbps.toFixed(2) + " Mbps.";
 
   updateCalculator();
@@ -113,7 +113,7 @@ function buildBenchmarkBars(items) {
 
   let html = "";
   items.forEach(function (item) {
-    const percent = (item.mbps / maxSpeed) * 100; // scaled against the fastest, so that bar is always 100% wide
+    const percent = (item.mbps / maxSpeed) * 100;
     html += '<p class="bench-label">' + item.place + ": " + item.mbps + " Mbps benchmark, " +
       item.period + " (" +
       '<a class="cite" href="sources.html#src-' + item.sourceId + '">' + item.sourceCite + "</a>)</p>";
@@ -125,13 +125,12 @@ function buildBenchmarkBars(items) {
 
 // converts a speed into a "1m 3s" style time for a 500MB file
 function downloadTimeText(mbps) {
-  // no hours here, none of the speeds we use are that slow
-  const fileSizeBits = 500 * 8 * 1000000; // 500MB written out in bits
-  const speedBps = mbps * 1000000; // turn the Mbps speed into plain bits per second
-  const totalSeconds = fileSizeBits / speedBps; // time = size divided by speed
+  const fileSizeBits = 500 * 8 * 1000000;
+  const speedBps = mbps * 1000000;
+  const totalSeconds = fileSizeBits / speedBps;
 
-  const minutes = Math.floor(totalSeconds / 60); // whole minutes
-  const seconds = Math.round(totalSeconds % 60); // whatever's left over, rounded
+  const minutes = Math.floor(totalSeconds / 60);
+  const seconds = Math.round(totalSeconds % 60);
 
   if (minutes === 0) {
     return seconds + "s";
@@ -145,10 +144,10 @@ function updateCalculator() {
   if (!calcBox || !pageBenchmarks || mySpeedMbps === null) return;
 
   let html = '<ul class="calc-list">';
-  html += "<li>Your speed: <strong>" + downloadTimeText(mySpeedMbps) + "</strong></li>"; // your measured speed
+  html += "<li>Your speed: <strong>" + downloadTimeText(mySpeedMbps) + "</strong></li>";
 
   pageBenchmarks.forEach(function (item) {
-    html += "<li>" + item.place + ": <strong>" + downloadTimeText(item.mbps) + "</strong></li>"; // same function, benchmark speed instead
+    html += "<li>" + item.place + ": <strong>" + downloadTimeText(item.mbps) + "</strong></li>";
   });
 
   html += "</ul>";

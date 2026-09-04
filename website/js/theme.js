@@ -1,4 +1,4 @@
-/* 
+/*
    theme.js
    Lets the visitor switch this page between light and dark
    mode by clicking the button in the navigation.

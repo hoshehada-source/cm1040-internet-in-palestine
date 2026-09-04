@@ -1,4 +1,4 @@
-/* 
+/*
    chart.js
    Bar chart for the home page. Loads internet-usage.json,
    checks it, draws bars as buttons
@@ -52,6 +52,7 @@ function buildSimpleChart(items) {
     html += '<button type="button" class="bar-btn" data-year="' + item.year + '" data-value="' + item.value +
       '" style="height:' + item.value + '%;" aria-label="' + item.year + ': ' + item.value + ' percent">';
 
+    // label every other year, otherwise they overlap
     if (i % 2 === 0) {
       html += '<span class="bar-year">' + item.year + '</span>';
     }

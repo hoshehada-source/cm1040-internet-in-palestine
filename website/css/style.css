@@ -1,4 +1,4 @@
-
+/* colours, fonts and shadows */
 :root {
   --ink: #16181d;
   --green: #0c7a43;
@@ -39,6 +39,7 @@
   background: #24282e;
 }
 
+/* reset and base styles */
 * {
   margin: 0;
   padding: 0;
@@ -88,11 +89,10 @@ input:focus-visible {
   left: 0;
 }
 
-/* header  */
+/* header */
 header.site-header {
   position: relative;
-  /* dark layer over the photo so the white text stays readable,
-     with the old gradient underneath in case the image does not load */
+  /* dark layer over the photo so the white text stays readable */
   background:
     linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)),
     url("../img/jerusalem.webp") center / cover no-repeat,
@@ -147,7 +147,7 @@ header.site-header .flag {
   transform: translate(-50%, -50%) rotate(45deg);
 }
 
-/* ---------- navigation ---------- */
+/* navigation */
 nav.site-nav {
   position: sticky;
   top: 0;
@@ -250,7 +250,7 @@ nav.site-nav {
   box-shadow: inset 4px 0 0 var(--gold);
 }
 
-/* main / sections*/
+/* main / sections */
 main {
   flex: 1;
   width: 100%;
@@ -283,7 +283,7 @@ p {
   margin-bottom: 0.9rem;
 }
 
-/* hero  */
+/* hero */
 .hero {
   position: relative;
   background:
@@ -319,7 +319,7 @@ p {
   margin: 0 auto 0.5rem;
 }
 
-/* banner image (with credit)*/
+/* banner image (with credit) */
 .banner {
   margin: 0 0 2rem;
 }
@@ -337,7 +337,7 @@ p {
   text-align: center;
 }
 
-/* grid of cards  */
+/* grid of cards */
 .grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -393,7 +393,7 @@ p {
   margin-bottom: 0.5rem;
 }
 
-/*  timeline  */
+/* timeline */
 #timeline {
   display: flex;
   flex-direction: column;
@@ -446,7 +446,7 @@ p {
   display: none;
 }
 
-/* data visualisation (chart)  */
+/* data visualisation (chart) */
 .chart-wrap {
   background: var(--card);
   border: 1px solid var(--border);
@@ -502,7 +502,7 @@ p {
   color: var(--muted);
 }
 
-/* speed simulator  */
+/* speed simulator */
 .sim-buttons {
   display: flex;
   flex-wrap: wrap;
@@ -594,7 +594,7 @@ p {
   color: inherit;
 }
 
-/* search bar  */
+/* search bar */
 .search-bar {
   margin-bottom: 1.3rem;
 }
@@ -620,7 +620,7 @@ p {
   box-shadow: 0 0 0 3px rgba(12, 122, 67, 0.18);
 }
 
-/* citations & sources  */
+/* citations & sources */
 a.cite {
   color: var(--green-dark);
   font-weight: 600;
@@ -670,7 +670,7 @@ a.cite:focus {
   box-shadow: 0 0 0 3px var(--gold), var(--shadow);
 }
 
-/* side note  */
+/* side note */
 .side-note {
   background: var(--card);
   border: 1px solid var(--border);
@@ -707,7 +707,7 @@ a.cite:focus {
   }
 }
 
-/* back-to-top button  */
+/* back-to-top button */
 #to-top {
   display: none;
   position: fixed;
@@ -730,7 +730,7 @@ a.cite:focus {
   transform: translateY(-3px);
 }
 
-/* footer  */
+/* footer */
 footer.site-footer {
   background: linear-gradient(135deg, #1d2024 0%, #0e0f12 100%);
   color: #cfd2d6;
@@ -778,7 +778,7 @@ footer.site-footer {
   border-bottom-color: var(--gold);
 }
 
-/* DESKTOP LAYOUT (768px and up) */
+/* desktop layout (768px and up) */
 @media (min-width: 768px) {
   header.site-header h1 {
     font-size: 2.4rem;
@@ -836,9 +836,7 @@ footer.site-footer {
   }
 }
 
-/*
-   MOBILE REFINEMENTS (from user feedback)
-   larger body text on phones (readability)*/
+/* mobile refinements from the feedback - bigger text on phones */
 @media (max-width: 767px) {
   main p {
     font-size: 1.06rem;

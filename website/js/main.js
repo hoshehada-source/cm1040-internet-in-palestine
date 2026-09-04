@@ -1,13 +1,12 @@
 /*
    main.js
-   Loads each template, fetches its matching JSON file, checks it,
-   then renders it. Also the nav toggle, timeline search and the
-   back-to-top button.
+   Loads the JSON for each page through the template engine
+   and handles the menu, timeline search and back-to-top button.
    */
 
 document.addEventListener("DOMContentLoaded", function () {
 
-  //Load the facts on the home page 
+  // Load the facts on the home page
   const factsBox = document.getElementById("facts");
   if (factsBox) {
     const factsEngine = new SimpleTemplateEngine("partials/facts-template.html");
@@ -32,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Load the timeline 
+  // Load the timeline
   const timelineBox = document.getElementById("timeline");
   if (timelineBox) {
     const timelineEngine = new SimpleTemplateEngine("partials/timeline-template.html");
@@ -57,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  //Load the operators
+  // Load the operators
   const operatorsBox = document.getElementById("operators");
   if (operatorsBox) {
     const operatorsEngine = new SimpleTemplateEngine("partials/operators-template.html");
@@ -107,7 +106,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Mobile menu button 
+  // Mobile menu button
   const toggle = document.querySelector(".nav-toggle");
   const menu = document.getElementById("nav-menu");
   if (toggle && menu) {
@@ -122,7 +121,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  //Timeline search
+  // Timeline search
   const searchBox = document.getElementById("timeline-search");
   if (searchBox) {
     searchBox.addEventListener("input", function () {

@@ -1,6 +1,6 @@
-/* 
+/*
    speed.js
-   Historical speed simulator. Loads internet-speed.json, click a
+   Historical speed simulator on the home page. Click a
    year to see a bar for the real speed that year.*/
 
 document.addEventListener("DOMContentLoaded", function () {

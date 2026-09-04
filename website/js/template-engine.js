@@ -25,7 +25,6 @@ class SimpleTemplateEngine {
             return listOfThings.map(item => this.replaceVariablesInFragment(templateFragment, item)).join('');
         });
 
-    
         output = this.replaceVariablesInFragment(output, data);
 
         tag.innerHTML = output;

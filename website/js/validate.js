@@ -1,5 +1,5 @@
 /* validate.js
-  Checks a JSON list before it gets rendered
+   Checks a JSON list before it gets rendered
 */
 
 function validateItems(items, requiredFields) {
@@ -7,7 +7,7 @@ function validateItems(items, requiredFields) {
     return { valid: false, message: "the data is not a list." };
   }
 
-  if (items.length == 0) {
+  if (items.length === 0) {
     return { valid: false, message: "the list is empty." };
   }
 
@@ -16,7 +16,7 @@ function validateItems(items, requiredFields) {
       const field = requiredFields[j];
       const value = items[i][field];
 
-      // strict checks here - with == a 0 value would count as "empty" by mistake
+      // check the field is there and not empty
       if (value === undefined || value === null || value === "") {
         return {
           valid: false,
