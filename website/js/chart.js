@@ -28,8 +28,8 @@ document.addEventListener("DOMContentLoaded", function () {
       bars.forEach(function (bar) {
         bar.addEventListener("click", function () {
           // reset all bars then highlight the one clicked
-          bars.forEach(function (b) { b.style.background = "#0c7a43"; });
-          this.style.background = "#c9a24b";
+          bars.forEach(function (b) { b.classList.remove("active"); });
+          this.classList.add("active");
 
           const year = this.getAttribute("data-year");
           const value = this.getAttribute("data-value");

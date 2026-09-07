@@ -477,6 +477,10 @@ p {
 .bar-btn:hover {
   background: var(--green-dark);
 }
+/* the bar the visitor clicked */
+.bar-btn.active {
+  background: var(--gold);
+}
 .bar-btn:focus {
   outline: 2px solid var(--gold);
   outline-offset: 2px;
@@ -611,8 +615,13 @@ p {
   border: 1px solid var(--border);
   border-radius: 10px;
   background: var(--card);
+  /* without this the typed text stays black on the dark theme */
+  color: var(--ink);
   box-shadow: var(--shadow-sm);
   transition: border-color 0.2s, box-shadow 0.2s;
+}
+#timeline-search::placeholder {
+  color: var(--muted);
 }
 #timeline-search:focus {
   outline: none;

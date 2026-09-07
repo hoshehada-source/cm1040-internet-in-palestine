@@ -5,55 +5,73 @@
    */
 
 class SimpleTemplateEngine {
-    constructor(template_url) {
-        this.template_url = template_url;
-    }
+  constructor(templateUrl) {
+    this.templateUrl = templateUrl;
+  }
 
-    loadTemplate() {
-        return fetch(this.template_url)
-            .then(response => response.text())
-            .then(text => {
-                this.template = text;
-            });
-    }
+  loadTemplate() {
+    // kept so the callbacks below can still reach the engine
+    const engine = this;
 
-    renderTemplate(tag_id, data) {
-        const tag = document.getElementById(tag_id);
-        let output = this.template;
+    return fetch(this.templateUrl)
+      .then(function (response) {
+        return response.text();
+      })
+      .then(function (text) {
+        engine.template = text;
+      });
+  }
 
-        // Each loops
-        output = output.replace(/{{#each (\w+)}}([\s\S]*?){{\/each}}/g, (match, arrayName, templateFragment) => {
-            const listOfThings = data[arrayName];
+  renderTemplate(tagId, data) {
+    const engine = this;
+    const tag = document.getElementById(tagId);
+    let output = this.template;
 
-            if (!Array.isArray(listOfThings)) {
-                return '';
-            }
-            return listOfThings.map(item => this.replaceVariablesInFragment(templateFragment, item)).join('');
-        });
+    // each loops
+    output = output.replace(/{{#each (\w+)}}([\s\S]*?){{\/each}}/g, function (match, arrayName, templateFragment) {
+      const listOfThings = data[arrayName];
 
-        output = this.replaceVariablesInFragment(output, data);
+      if (!Array.isArray(listOfThings)) {
+        return "";
+      }
+      return listOfThings.map(function (item) {
+        return engine.replaceVariablesInFragment(templateFragment, item);
+      }).join("");
+    });
 
-        tag.innerHTML = output;
-    }
+    output = this.replaceVariablesInFragment(output, data);
 
-    replaceVariablesInFragment(templateFragment, data) {
-        let output = templateFragment;
+    tag.innerHTML = output;
+  }
 
-        // If-Else conditions
-        output = output.replace(/{{#if (\w+)}}([\s\S]*?){{else}}([\s\S]*?){{\/if}}/g, (match, condition, ifContent, elseContent) => {
-            return data[condition] ? ifContent : elseContent;
-        });
+  replaceVariablesInFragment(templateFragment, data) {
+    let output = templateFragment;
 
-        // If conditions without else
-        output = output.replace(/{{#if (\w+)}}([\s\S]*?){{\/if}}/g, (match, condition, ifContent) => {
-            return data[condition] ? ifContent : '';
-        });
+    // if-else conditions
+    output = output.replace(/{{#if (\w+)}}([\s\S]*?){{else}}([\s\S]*?){{\/if}}/g, function (match, condition, ifContent, elseContent) {
+      return data[condition] ? ifContent : elseContent;
+    });
 
-        // Variable swapping
-        output = output.replace(/{{(\w+)}}/g, (match, dataKey) => {
-            return data[dataKey];
-        });
+    // if conditions without else
+    output = output.replace(/{{#if (\w+)}}([\s\S]*?){{\/if}}/g, function (match, condition, ifContent) {
+      return data[condition] ? ifContent : "";
+    });
 
-        return output;
-    }
+    // variable swapping - escaped so a < or & in the JSON shows as text
+    // instead of being read as HTML
+    output = output.replace(/{{(\w+)}}/g, function (match, dataKey) {
+      return escapeHtml(data[dataKey]);
+    });
+
+    return output;
+  }
+}
+
+// turns the characters that mean something in HTML into safe entities
+function escapeHtml(value) {
+  return String(value)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
 }
