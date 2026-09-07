@@ -58,3 +58,8 @@ pages now 100). Optimised images Lighthouse flagged. W3C Nu Html Checker: fixed!
 Fixed the MTIT founding year and removed an inaccurate PTRA claim. Updated the Test
 Your Connection benchmarks to the latest figures. Set up git, pushed to a private
 GitHub repository.
+
+## v1.7 — Theme and text size remembered between pages
+Moving between pages reset the dark theme and the larger text back to the default.
+Saved both choices in localStorage so they carry over. Tidied the comments at the
+top of each JS file.

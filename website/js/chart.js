@@ -1,8 +1,9 @@
 /*
    chart.js
    Bar chart for the home page. Loads internet-usage.json,
-   checks it, draws bars as buttons
-   Click a bar to see the exact number. */
+   checks it, draws bars as buttons.
+   Click a bar to see the exact number.
+   */
 
 document.addEventListener("DOMContentLoaded", function () {
   const chartBox = document.getElementById("usage-chart");

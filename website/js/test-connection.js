@@ -1,7 +1,9 @@
-/*  test-connection.js
+/*
+   test-connection.js
    "Test your connection" page. Times the visitor's download
    speed, loads real benchmark numbers for Palestine + UAE, and
-   works out how long a 500MB file would take at each speed. */
+   works out how long a 500MB file would take at each speed.
+   */
 
 let pageBenchmarks = null;
 let mySpeedMbps = null;

@@ -1,3 +1,9 @@
+/*
+   template-engine.js
+   Loads a partial file and fills in {{variable}},
+   {{#each}} loops and {{#if}} conditions.
+   */
+
 class SimpleTemplateEngine {
     constructor(template_url) {
         this.template_url = template_url;

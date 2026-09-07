@@ -1,7 +1,8 @@
 /*
    speed.js
    Historical speed simulator on the home page. Click a
-   year to see a bar for the real speed that year.*/
+   year to see a bar for the real speed that year.
+   */
 
 document.addEventListener("DOMContentLoaded", function () {
   const simBox = document.getElementById("speed-sim");
