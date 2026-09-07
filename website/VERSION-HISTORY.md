@@ -54,12 +54,9 @@ count-up animation.
 Fixed a touch-target issue on the Home page chart (95 → 100 accessibility, all
 pages now 100). Optimised images Lighthouse flagged. W3C Nu Html Checker: fixed!.
 
-## v1.6 — Data accuracy check and version control
+## v1.6 — Data accuracy check and version control, Theme and text size remembered between pages
 Fixed the MTIT founding year and removed an inaccurate PTRA claim. Updated the Test
 Your Connection benchmarks to the latest figures. Set up git, pushed to a private
-GitHub repository.
-
-## v1.7 — Theme and text size remembered between pages
-Moving between pages reset the dark theme and the larger text back to the default.
+GitHub repository. Moving between pages reset the dark theme and the larger text back to the default.
 Saved both choices in localStorage so they carry over. Tidied the comments at the
 top of each JS file.
