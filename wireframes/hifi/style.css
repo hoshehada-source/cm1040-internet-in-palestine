@@ -1,0 +1,454 @@
+/* High-fidelity version of the wireframes: same layout, real colours,
+   fonts, photos and text. The structure follows wireframes/style.css. */
+
+:root {
+    --ink: #16181d;
+    --green: #0c7a43;
+    --green-dark: #085e33;
+    --gold: #c9a24b;
+    --bg: #f6f5f1;
+    --card: #ffffff;
+    --border: #e6e3db;
+    --text: #23262b;
+    --muted: #5c6470;
+    --serif: Georgia, "Times New Roman", serif;
+    --sans: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    line-height: 1.7;
+}
+
+/* template base */
+header {
+    position: relative;
+    /* the grey band from the wireframe, now the real photo behind the title */
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.45)),
+        url("../img/ramallah.webp") center / cover no-repeat;
+    color: #fff;
+    padding: 2.6rem 1rem;
+    text-align: center;
+    border-bottom: 3px solid var(--gold);
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+header .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: .68rem;
+    font-weight: 700;
+    color: #6ee7b7;
+    margin-bottom: .6rem;
+}
+
+header h1 {
+    font-family: var(--serif);
+    font-size: 1.9rem;
+    font-weight: 700;
+    letter-spacing: .5px;
+}
+
+/* the word Palestine picks up the green from the flag */
+header h1 .flag {
+    color: #6ee7b7;
+}
+
+header .tagline {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 1rem;
+    color: #b9bec4;
+    margin: .55rem 0 0;
+}
+
+/* small gold diamond under the tagline */
+header .rule {
+    display: block;
+    width: 8px;
+    height: 8px;
+    margin: .9rem auto 0;
+    background: var(--gold);
+    transform: rotate(45deg);
+}
+
+header .credit {
+    position: absolute;
+    left: .6rem;
+    bottom: .5rem;
+    font-size: .65rem;
+    color: rgba(255, 255, 255, .7);
+    text-shadow: none;
+}
+
+nav {
+    background: var(--card);
+    border-bottom: 1px solid var(--border);
+    padding: .5rem 1rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: .4rem;
+    flex: 1;
+}
+
+/* the nav is a row: links in the middle, the two option buttons on the right */
+nav {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 600;
+    font-size: .9rem;
+    text-transform: uppercase;
+    letter-spacing: .6px;
+    padding: .5rem .8rem;
+    display: inline-block;
+}
+
+/* the text-size and dark-theme buttons that sit at the end of the nav */
+.opt {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    width: 2.1rem;
+    height: 2.1rem;
+    font: inherit;
+    font-size: .8rem;
+    font-weight: 700;
+    cursor: pointer;
+    flex: 0 0 auto;
+}
+
+nav a:hover {
+    color: var(--green-dark);
+}
+
+/* the page you are on gets the gold underline */
+nav a.here {
+    color: var(--green-dark);
+    box-shadow: inset 0 -3px 0 var(--gold);
+}
+
+nav a:focus-visible {
+    outline: 3px solid var(--gold);
+    outline-offset: 2px;
+}
+
+.nav-toggle {
+    display: none;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: .4rem .8rem;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+main {
+    flex: 1;
+    padding: 1.4rem 1rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+footer {
+    background: var(--ink);
+    color: #cfd3d8;
+    text-align: center;
+    padding: 1rem;
+    font-size: .85rem;
+}
+
+/* sections */
+section {
+    margin-bottom: 1.8rem;
+}
+
+h2 {
+    font-family: var(--serif);
+    font-size: 1.5rem;
+    color: var(--ink);
+    margin-bottom: .3rem;
+}
+
+/* the green-to-gold line that sits under every heading */
+h2::after {
+    content: "";
+    display: block;
+    width: 56px;
+    height: 3px;
+    margin-top: .4rem;
+    margin-bottom: .9rem;
+    background: linear-gradient(90deg, var(--green), var(--gold));
+}
+
+p {
+    margin-bottom: .8rem;
+}
+
+/* where the wireframe had a grey box, here there is a real photo */
+.pic img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 14px;
+    display: block;
+}
+
+figcaption,
+.cap {
+    font-size: .8rem;
+    color: var(--muted);
+    font-style: italic;
+    margin-top: .4rem;
+}
+
+.hero {
+    /* dark panel so the flag and the title stand out from the page */
+    background:
+        radial-gradient(1200px 300px at 20% -10%, rgba(75, 191, 130, .18), transparent 60%),
+        linear-gradient(140deg, #1d2024 0%, #0d0f12 100%);
+    color: #fff;
+    padding: 2.4rem 1.5rem;
+    border-radius: 16px;
+    text-align: center;
+    margin-bottom: 1.2rem;
+}
+
+.hero img {
+    width: 6rem;
+    max-width: 38%;
+    display: block;
+    margin: 0 auto 1.1rem;
+    border-radius: 6px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, .4);
+}
+
+.hero h3 {
+    font-family: var(--serif);
+    font-size: 1.7rem;
+    color: #fff;
+    margin-bottom: .7rem;
+}
+
+.hero p {
+    color: #e7e9ea;
+    max-width: 41rem;
+    margin: 0 auto;
+}
+
+/* cards */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.grid.two {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.box {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 1.2rem;
+}
+
+.key-facts .box {
+    border-top: 4px solid var(--green);
+}
+
+.stat {
+    font-family: var(--serif);
+    font-size: 2.1rem;
+    font-weight: 700;
+    color: var(--green-dark);
+    line-height: 1.1;
+}
+
+.label {
+    color: var(--muted);
+    margin: 0;
+}
+
+/* timeline events */
+.event {
+    border-left: 5px solid var(--green);
+}
+
+.event .year {
+    font-family: var(--serif);
+    color: var(--gold);
+    font-weight: 700;
+}
+
+.event h3 {
+    font-family: var(--serif);
+    font-size: 1.05rem;
+    color: var(--ink);
+    margin-bottom: .2rem;
+}
+
+.event p {
+    color: var(--muted);
+    margin: 0;
+    font-size: .92rem;
+}
+
+/* side note: photo next to its text, as in the wireframe */
+.side {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.side img {
+    width: 140px;
+    flex: 0 0 140px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+}
+
+/* operator logos */
+.logo {
+    text-align: center;
+}
+
+.logo img {
+    height: 38px;
+    max-width: 80%;
+    object-fit: contain;
+    margin-bottom: .5rem;
+}
+
+.logo h3 {
+    font-family: var(--serif);
+    font-size: 1.05rem;
+    color: var(--ink);
+}
+
+.logo p {
+    color: var(--muted);
+    font-size: .88rem;
+    margin: 0;
+}
+
+/* buttons */
+.btn {
+    display: inline-block;
+    background: var(--green);
+    color: #fff;
+    border: 1px solid var(--green);
+    border-radius: 999px;
+    padding: .5rem 1.1rem;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: var(--green-dark);
+}
+
+.btn:focus-visible {
+    outline: 3px solid var(--gold);
+    outline-offset: 2px;
+}
+
+/* the speed comparison bars */
+.bars {
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+    height: 120px;
+    border-bottom: 1px solid var(--border);
+}
+
+.bar {
+    flex: 1;
+    background: var(--green);
+    border-radius: 4px 4px 0 0;
+}
+
+/* the bar for your own result */
+.bar.mine {
+    background: var(--gold);
+}
+
+/* sources */
+.source {
+    border-left: 5px solid var(--green);
+}
+
+.source h3 {
+    font-family: var(--serif);
+    font-size: 1rem;
+    color: var(--ink);
+}
+
+.source p {
+    color: var(--muted);
+    font-size: .88rem;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    /* on mobile the links collapse behind a menu button */
+    .nav-toggle {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    nav ul.open {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+        text-align: center;
+        margin-top: .5rem;
+    }
+
+    .grid,
+    .grid.two {
+        grid-template-columns: 1fr;   /* everything stacks into one column */
+    }
+
+    header h1 {
+        font-size: 1.4rem;
+    }
+
+    nav ul.open {
+        width: 100%;
+    }
+
+    .pic img {
+        height: 160px;
+    }
+}

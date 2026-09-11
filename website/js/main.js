@@ -17,13 +17,14 @@ document.addEventListener("DOMContentLoaded", function () {
           return response.json();
         })
         .then(function (data) {
-          const check = validateItems(data.facts, ["stat", "label"]);
+          const check = validateItems(data.facts, ["stat", "label", "source", "sourceId"]);
           if (!check.valid) {
             factsBox.innerHTML = "<p>Sorry, the data could not be shown: " + check.message + "</p>";
             return;
           }
 
           factsEngine.renderTemplate("facts", { facts: data.facts });
+          setUpFactButtons();
         })
         .catch(function () {
           factsBox.innerHTML = "<p>Sorry, could not load the facts.</p>";
@@ -125,27 +126,18 @@ document.addEventListener("DOMContentLoaded", function () {
   const searchBox = document.getElementById("timeline-search");
   if (searchBox) {
     searchBox.addEventListener("input", function () {
-      const word = searchBox.value.toLowerCase();
-      const allEvents = document.querySelectorAll("#timeline .event");
-      let count = 0;
+      runTimelineSearch(searchBox.value);
+    });
 
-      allEvents.forEach(function (oneEvent) {
-        const eventText = oneEvent.textContent.toLowerCase();
-        if (eventText.includes(word)) {
-          oneEvent.style.display = "";
-          count = count + 1;
-        } else {
-          oneEvent.style.display = "none";
-        }
-      });
-
-      const message = document.getElementById("no-result");
-      if (message) {
-        if (count === 0) {
-          message.style.display = "block";
-        } else {
-          message.style.display = "none";
-        }
+    searchBox.addEventListener("keydown", function (keyEvent) {
+      // Enter did nothing before, so the box felt stuck
+      if (keyEvent.key === "Enter") {
+        keyEvent.preventDefault();
+        goToFirstMatch();
+      }
+      if (keyEvent.key === "Escape") {
+        searchBox.value = "";
+        runTimelineSearch("");
       }
     });
   }
@@ -166,3 +158,94 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
 });
+
+// filters the timeline. A number only matches the year, so typing 2018
+// no longer matches the "(AFP, 2018)" citation on the 2015 event
+function runTimelineSearch(value) {
+  const query = value.trim().toLowerCase();
+  const yearOnly = /^\d+$/.test(query);
+  const allEvents = document.querySelectorAll("#timeline .event");
+  let count = 0;
+
+  allEvents.forEach(function (oneEvent) {
+    const year = oneEvent.querySelector(".event-year").textContent.toLowerCase();
+    const title = oneEvent.querySelector("h3").textContent.toLowerCase();
+    const description = descriptionWithoutCitation(oneEvent);
+    let match;
+
+    if (query === "") {
+      match = true;
+    } else if (yearOnly) {
+      match = year.startsWith(query);
+    } else {
+      match = title.includes(query) || description.includes(query);
+    }
+
+    if (match) {
+      oneEvent.style.display = "";
+      count = count + 1;
+    } else {
+      oneEvent.style.display = "none";
+    }
+  });
+
+  const message = document.getElementById("no-result");
+  if (message) {
+    if (count === 0) {
+      message.style.display = "block";
+    } else {
+      message.style.display = "none";
+    }
+  }
+}
+
+// the citation is a source credit, not part of the event, so it is left out
+function descriptionWithoutCitation(oneEvent) {
+  const paragraph = oneEvent.querySelector(".event-body p");
+  if (!paragraph) {
+    return "";
+  }
+
+  let text = paragraph.textContent.toLowerCase();
+  const cite = paragraph.querySelector(".cite");
+  if (cite) {
+    text = text.replace(cite.textContent.toLowerCase(), "");
+  }
+  return text;
+}
+
+// Enter jumps to the first result instead of doing nothing
+function goToFirstMatch() {
+  const allEvents = document.querySelectorAll("#timeline .event");
+
+  for (let i = 0; i < allEvents.length; i++) {
+    if (allEvents[i].style.display !== "none") {
+      allEvents[i].scrollIntoView({ behavior: "smooth", block: "center" });
+      return;
+    }
+  }
+}
+
+// each key fact hides its source until the visitor asks for it
+function setUpFactButtons() {
+  const buttons = document.querySelectorAll(".fact-btn");
+
+  buttons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      const source = button.parentElement.querySelector(".fact-source");
+      if (!source) {
+        return;
+      }
+
+      if (source.hidden) {
+        source.hidden = false;
+        button.textContent = "Hide source";
+        button.setAttribute("aria-expanded", "true");
+      } else {
+        source.hidden = true;
+        button.textContent = "Where is this from?";
+        button.setAttribute("aria-expanded", "false");
+      }
+    });
+  });
+}

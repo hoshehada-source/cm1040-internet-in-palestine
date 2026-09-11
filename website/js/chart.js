@@ -46,20 +46,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // builds the row of bar buttons from the {year, value} list
 function buildSimpleChart(items) {
-  let html = '<div class="bars">';
+  let html = '<div class="chart-area">';
 
-  items.forEach(function (item, i) {
+  // value scale on the left, so the bars can be read without clicking one.
+  // hidden from screen readers because every bar already carries its own label
+  html += '<ul class="y-axis" aria-hidden="true">';
+  html += '<li>100%</li><li>75%</li><li>50%</li><li>25%</li><li>0%</li>';
+  html += '</ul>';
+
+  html += '<div class="bars">';
+
+  items.forEach(function (item) {
     // value is already 0-100 so it can go straight in as the height %
     html += '<button type="button" class="bar-btn" data-year="' + item.year + '" data-value="' + item.value +
       '" style="height:' + item.value + '%;" aria-label="' + item.year + ': ' + item.value + ' percent">';
 
-    // label every other year, otherwise they overlap
-    if (i % 2 === 0) {
-      html += '<span class="bar-year">' + item.year + '</span>';
-    }
+    html += '<span class="bar-value">' + item.value + '</span>';
+    html += '<span class="bar-year">' + item.year + '</span>';
     html += '</button>';
   });
 
-  html += '</div>';
+  html += '</div></div>';
   return html;
 }

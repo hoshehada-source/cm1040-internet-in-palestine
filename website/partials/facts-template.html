@@ -2,5 +2,7 @@
 <article class="card fact">
   <p class="fact-stat">{{stat}}</p>
   <p class="fact-label">{{label}}</p>
+  <button type="button" class="fact-btn" aria-expanded="false">Where is this from?</button>
+  <p class="fact-source" hidden>{{source}} &mdash; <a class="cite" href="sources.html#src-{{sourceId}}">see Sources</a></p>
 </article>
 {{/each}}
