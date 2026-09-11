@@ -150,6 +150,8 @@ main h2 {
         flex-direction: column;
         gap: .5rem;
         text-align: center;
+        /* sits clearly under the button instead of level with it */
+        margin-top: .75rem;
     }
     .grid,
     .grid.two {
