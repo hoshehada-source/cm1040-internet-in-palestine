@@ -1,11 +1,20 @@
 # Media credits
 
 ## Images I did NOT create (attributed here)
-- Jerusalem panoram (`img/jerusalem.webp`) — "Panorámica de Jerusalén desde el Monte de
-  los Olivos" by Bienchido, from Wikimedia Commons. Licensed under CC BY-SA 4.0.
-  https://commons.wikimedia.org/wiki/File:Panor%C3%A1mica_de_Jerusal%C3%A9n_desde_el_Monte_de_los_Olivos.jpg
+- Ramallah at night (`img/ramallah.webp`) — "A view of a city at night from a hill" by
+  Yaman Zaareer on Unsplash (Unsplash licence, free to use). Used as the site header
+  background on every page.
+  https://unsplash.com/photos/a-view-of-a-city-at-night-from-a-hill-ypoiZlkaKnE
+- Fibre-optic strands (`img/fibre.webp`) — "White and blue light on dark room" by
+  Denny Müller on Unsplash (Unsplash licence). Used as the banner on the Test Your
+  Connection page.
+  https://unsplash.com/photos/white-and-blue-light-on-dark-room-JyRTi3LoQnc
+- Network switch (`img/fibre-switch.webp`) — "Fiber optic cables in network switch" by
+  Kirill Sh on Unsplash (Unsplash licence). Used as the banner on the Operators page.
+  https://unsplash.com/photos/fiber-optic-cables-in-network-switch-eVWWr6nmDf8
 - Telecommunications tower photo (`img/tower.jpg`) — Photo by Kabiur Rahman Riyad on
-  Unsplash (Unsplash licence, free to use). https://unsplash.com/
+  Unsplash (Unsplash licence). Used in the side note on the Timeline page.
+  https://unsplash.com/photos/a-tall-metal-tower-j8B2SuM4UlE
 - Operator logos — used to identify the companies (editorial use):
   - `img/paltel.png` — Paltel logo, © Paltel Group (paltel.ps)
   - `img/jawwal.webp` — Jawwal logo, © Jawwal (jawwal.ps)
