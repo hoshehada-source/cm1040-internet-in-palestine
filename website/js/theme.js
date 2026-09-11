@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// keeps the button icon and label matching the theme that is showing
+// updates the button to match the theme
 function showThemeOnButton(button, theme) {
   if (theme === "dark") {
     button.textContent = "☀️";

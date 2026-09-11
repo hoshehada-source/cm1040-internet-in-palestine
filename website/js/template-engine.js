@@ -10,7 +10,7 @@ class SimpleTemplateEngine {
   }
 
   loadTemplate() {
-    // kept so the callbacks below can still reach the engine
+    // used by the functions below
     const engine = this;
 
     return fetch(this.templateUrl)
@@ -57,8 +57,7 @@ class SimpleTemplateEngine {
       return data[condition] ? ifContent : "";
     });
 
-    // variable swapping - escaped so a < or & in the JSON shows as text
-    // instead of being read as HTML
+    // variable swapping, escaped first
     output = output.replace(/{{(\w+)}}/g, function (match, dataKey) {
       return escapeHtml(data[dataKey]);
     });
@@ -67,7 +66,7 @@ class SimpleTemplateEngine {
   }
 }
 
-// turns the characters that mean something in HTML into safe entities
+// replaces the HTML characters with entities
 function escapeHtml(value) {
   return String(value)
     .replace(/&/g, "&amp;")

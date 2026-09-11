@@ -130,7 +130,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     searchBox.addEventListener("keydown", function (keyEvent) {
-      // Enter did nothing before, so the box felt stuck
+      // Enter and Escape
       if (keyEvent.key === "Enter") {
         keyEvent.preventDefault();
         goToFirstMatch();
@@ -159,8 +159,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
-// filters the timeline. A number only matches the year, so typing 2018
-// no longer matches the "(AFP, 2018)" citation on the 2015 event
+// filters the timeline. Numbers search the year only
 function runTimelineSearch(value) {
   const query = value.trim().toLowerCase();
   const yearOnly = /^\d+$/.test(query);
@@ -199,7 +198,7 @@ function runTimelineSearch(value) {
   }
 }
 
-// the citation is a source credit, not part of the event, so it is left out
+// gets the description text without the citation
 function descriptionWithoutCitation(oneEvent) {
   const paragraph = oneEvent.querySelector(".event-body p");
   if (!paragraph) {
@@ -214,7 +213,7 @@ function descriptionWithoutCitation(oneEvent) {
   return text;
 }
 
-// Enter jumps to the first result instead of doing nothing
+// scrolls to the first event still showing
 function goToFirstMatch() {
   const allEvents = document.querySelectorAll("#timeline .event");
 
@@ -226,7 +225,7 @@ function goToFirstMatch() {
   }
 }
 
-// each key fact hides its source until the visitor asks for it
+// shows and hides the source under each fact
 function setUpFactButtons() {
   const buttons = document.querySelectorAll(".fact-btn");
 

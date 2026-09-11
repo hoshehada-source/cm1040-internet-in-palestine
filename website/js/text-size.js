@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// keeps the button label matching the size that is showing
+// updates the button to match the size
 function showSizeOnButton(button, size) {
   if (size === "large") {
     button.textContent = "A-";

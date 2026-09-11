@@ -38,8 +38,7 @@ function downloadOnce(measurements) {
     });
 }
 
-// runs the download 3 times and uses the middle result, so one
-// unusually fast/slow request doesn't throw the whole number off
+// downloads 3 times and uses the middle result
 function measureMySpeed(result) {
   const measurements = [];
 
@@ -67,7 +66,7 @@ function showResult(result, measurements) {
   measurements.sort(function (a, b) { return a.mbps - b.mbps; });
   const median = measurements[Math.floor(measurements.length / 2)];
 
-  // if it finished this fast it's probably running locally, not a real number
+  // too fast to be a real measurement
   if (median.seconds < 0.02) {
     result.textContent = "That was too fast to measure reliably - this usually " +
       "happens when the site is running on a local server rather than online.";
@@ -140,7 +139,7 @@ function downloadTimeText(mbps) {
   return minutes + "m " + seconds + "s";
 }
 
-// need my speed + the benchmarks before there's anything to compare
+// needs both numbers before it can compare
 function updateCalculator() {
   const calcBox = document.getElementById("calc-box");
   if (!calcBox || !pageBenchmarks || mySpeedMbps === null) return;

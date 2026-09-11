@@ -48,8 +48,8 @@ document.addEventListener("DOMContentLoaded", function () {
 function buildSimpleChart(items) {
   let html = '<div class="chart-area">';
 
-  // value scale on the left, so the bars can be read without clicking one.
-  // hidden from screen readers because every bar already carries its own label
+  // the % scale down the left side
+  // hidden from screen readers, each bar has its own label
   html += '<ul class="y-axis" aria-hidden="true">';
   html += '<li>100%</li><li>75%</li><li>50%</li><li>25%</li><li>0%</li>';
   html += '</ul>';
@@ -57,7 +57,7 @@ function buildSimpleChart(items) {
   html += '<div class="bars">';
 
   items.forEach(function (item) {
-    // value is already 0-100 so it can go straight in as the height %
+    // the value is 0-100, used as the height percentage
     html += '<button type="button" class="bar-btn" data-year="' + item.year + '" data-value="' + item.value +
       '" style="height:' + item.value + '%;" aria-label="' + item.year + ': ' + item.value + ' percent">';
 
